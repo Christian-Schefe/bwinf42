@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'bwinf_42'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bwinf_42",
+                    "--package=bwinf_42"
+                ],
+                "filter": {
+                    "name": "bwinf_42",
+                    "kind": "bin"
+                }
+            },
+            "args": ["problems/raetsel5.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'bwinf_42'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=bwinf_42",
+                    "--package=bwinf_42"
+                ],
+                "filter": {
+                    "name": "bwinf_42",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
